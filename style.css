@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.col2 {
+  flex-grow: 5;
+  background-image: url("https://www.bestplace-immobilien.de/wp-content/uploads/2019/05/Essbereich.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: left;
+  margin-right: 0.7em;
+  position: relative;
+}
+
+.col3 {
+  flex-grow: 7;
+}
+.col3_box1 {
+  background-image: url("https://www.bestplace-immobilien.de/wp-content/uploads/2019/05/Bad_pure.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 49vh;
+  background-position: left;
+  position: relative;
+}
+
+.col::before {
+  background: rgba(15, 40, 60, 0.637);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.col:hover::before {
+  background: rgba(16, 42, 63, 0.925);
+  transition: all 100ms;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+.col3_box2 {
+  background: url("https://www.bestplace-immobilien.de/wp-content/uploads/2019/05/Aussenansich_Tag-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 49vh;
+  background-position: left;
+  position: relative;
+}
+
+.img1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img-headline {
+  font-size: 2em;
+  color: #fff;
+  display: block;
+}
+.img-arrow {
+  font-size: 2em;
+  color: #fff;
+}
+.img-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col1 {
+  width: 42%;
+  height: 100vh;
+}
+.col1 menu {
+}
+
+.col1 .menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 3.5em 5em;
+}
+.menu ul {
+  align-items: left;
+}
+
+.menu ul li {
+  list-style: none;
+  text-align: left;
+  color: #0f283c;
+  font-size: 28px;
+  line-height: 1.3;
+  font-weight: 200;
+  padding-left: 1em;
+  cursor: pointer;
+  transition: all 200ms;
+  
+}
+
+.menu ul li:hover {
+  background: url("menu-icons.svg");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  transition: all 200ms;
+  background-position:left;
+}
+.close-btn {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  display: block;
+  right: 4%;
+  top: 10%;
+  width: 50px;
+  height: 50px;
+  z-index: 3;
+  background-color: #fff;
+  border-radius: 100%;
+  text-align: center;
+  align-items: center;
+  font-size: 25px;
+  cursor: pointer;
+}
+.close-btn i {
+  padding-top: 0.5em;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: black;
+}
+.social {
+  padding-left: 1em;
+}
+.social a {
+  color: black;
+  padding: 0.2em;
+}
+.social i {
+  font-size: 24px;
+}
+.phone1 .fa-phone {
+  color: black;
+  display: none;
+}
+.phone2 a {
+  padding-right: 1em;
+  text-decoration: none;
+  color: rgb(77, 62, 62);
+  font-size: 16px;
+}
+.langauge_wrapper {
+  display: none;
+}
+.langauge ul {
+  display: flex;
+  justify-content: space-between;
+
+  list-style: none;
+}
+.langauge ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-right: 1em;
+  color: gray;
+  font-weight: 400;
+}
+.deutsch {
+  color: black;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .col {
+    display: none;
+  }
+
+  .phone2 {
+    display: none;
+  }
+  .langauge_wrapper {
+    display: block;
+  }
+  .phone1 .fa-phone {
+    color: black;
+    display: block;
+  }
+  .col1 {
+    width: 100%;
+  }
+  .menu ul li {
+    text-align: center;
+  }
+  .col1 .menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+}
